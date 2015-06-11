@@ -34,14 +34,14 @@
 				$scope.win=function (){
 					var winCandidate=$scope.winner;
 					for (var i in $scope.candidates){
-						if(winCandidate.winnerVotes<$scope.candidates[i].votesNumber){
+						if(winCandidate.winnerVotes>$scope.candidates[i].votesNumber){
+                           continue;
+                        }
+						else if(winCandidate.winnerVotes<=$scope.candidates[i].votesNumber){
 							$scope.winner.winnerName=$scope.candidates[i].name;
 							$scope.winner.winnerVotes=$scope.candidates[i].votesNumber;
-						}else if(winCandidate.winnerVotes===$scope.candidates[i].votesNumber){
-                          $scope.winner.winnerName='---';
-						}
+						}	
 					};
-
 				};
 				$scope.count=function (){
 					$scope.counter.sum+=1;
