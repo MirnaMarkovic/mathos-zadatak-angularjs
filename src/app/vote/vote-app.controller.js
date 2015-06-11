@@ -18,7 +18,7 @@
 				}];
 
 				$scope.winner={
-                    winnerName:'--',
+                    winnerName:'---',
                     winnerVotes: 0,
                     percentage: 0
 				};
@@ -34,10 +34,12 @@
 				$scope.win=function (){
 					var winCandidate=$scope.winner;
 					for (var i in $scope.candidates){
-						if($scope.candidates[i].votesNumber>winCandidate.winnerVotes){
+						if(winCandidate.winnerVotes<$scope.candidates[i].votesNumber){
 							$scope.winner.winnerName=$scope.candidates[i].name;
 							$scope.winner.winnerVotes=$scope.candidates[i].votesNumber;
-						};
+						}else if(winCandidate.winnerVotes===$scope.candidates[i].votesNumber){
+                          $scope.winner.winnerName='---';
+						}
 					};
 
 				};

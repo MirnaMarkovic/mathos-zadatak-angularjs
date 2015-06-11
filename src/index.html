@@ -19,17 +19,19 @@
 			<hr />
 			<ul class="vote-list">
 				<li ng-repeat="candidate in candidates">
-					<button class="candidate-btn" ng-click="selected('candidate')">{{candidate.name}}</button>
+					<button class="candidate-btn" ng-click="selected('candidate')">{{::candidate.name}}</button>
 					<p>Broj glasova: <strong>{{candidate.votesNumber}}</strong></p>
             	</li>
 			</ul>
-            <p>{{winner.winnerName}} is winner with {{winner.winnerVotes}} votes! {{winner.percentage | winnerDescription}}</p>
+            <p>{{winner.winnerName | winnerCheck}} {{winner.winnerVotes}} <br />
+            {{winner.percentage | winnerDescription}}</p>
 	    </div>
 	</div>
     <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
 	<script src="https://code.angularjs.org/1.4.0/angular-route.min.js"></script>
 	<script src="app/app.module.js"></script>
 	<script src="app/vote/vote-app.controller.js"></script>
-	<script src="app/components/filters/winner-description.js"></script>
+	<script src="app/components/filters/winner-description.filter.js"></script>
+	<script src="app/components/filters/winner-check.filter.js"></script>
 </body>
 </html>
