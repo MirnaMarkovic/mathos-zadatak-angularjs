@@ -1,37 +1,27 @@
 <!DOCTYPE html>
-<hmtl ng-app="voteApp">
+<hmtl ng-app="poll">
 <head>
-	<title>Vote</title>
+	<title>Poll</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" href="app/css/app.css">
 </head>
 <body class="body">
-	<header>
-		<h1 class="title">Vote for ME!</h2>
-	</header>
-	<div class="container">
-		<div class="inner-container">
-			<img src="app/img/vote1.jpg" alt="Vote for me"/>
-	    </div>
-	    <div class="inner-container" ng-controller="MainController">
-			<h3>I vote for:</h3>
-			<hr />
-			<ul class="vote-list">
-				<li ng-repeat="candidate in candidates">
-					<button class="candidate-btn" ng-click="selected('candidate')">{{::candidate.name}}</button>
-					<p>Broj glasova: <strong>{{candidate.votesNumber}}</strong></p>
-            	</li>
-			</ul>
-            <p>{{winner.winnerName | winnerCheck}} {{winner.winnerVotes}} <br />
-            {{winner.percentage | winnerDescription}}</p>
-	    </div>
+	<div>
+		<header>
+			<h1 class="title">AngularJS Questions</h1>
+		</header>
+		<div ng-view="">
+
+		</div>
 	</div>
     <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
 	<script src="https://code.angularjs.org/1.4.0/angular-route.min.js"></script>
 	<script src="app/app.module.js"></script>
-	<script src="app/vote/vote-app.controller.js"></script>
-	<script src="app/components/filters/winner-description.filter.js"></script>
-	<script src="app/components/filters/winner-check.filter.js"></script>
+	<script src="app/app.config.js"></script>
+	<script src="app/components/directives/answers/answers.directive.js"></script>
+	<script src="app/poll/poll.service.js"></script>
+	<script src="app/poll/poll.controller.js"></script>
+	<script src="app/question/question.controller.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<div class="container">	
+	<p>{{selectedQuestion.question}}</p>
+	<small>{{selectedQuestion.description}}</small>
+	<div ng-controller="QuestionController">
+		<answers selected-question="selectedQuestion" selected-question-click="vote(id)" winner="winner"></answers>
+	</div>
+	<a href="#/" ng-click="main.close()" title="Back">Back</a>
+</div>

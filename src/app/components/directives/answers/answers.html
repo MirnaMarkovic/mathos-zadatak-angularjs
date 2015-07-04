@@ -1,0 +1,8 @@
+<div>
+<ul  ng-repeat="selectedAnswer in selectedQuestion.answers">
+	<li>
+		<button ng-click="selectedQuestionClick(selectedAnswer)">{{selectedAnswer.answer}}</button> - {{selectedAnswer.count}}
+	</li>
+</ul>
+<p>Winner: {{winner}}</p>
+</div>
