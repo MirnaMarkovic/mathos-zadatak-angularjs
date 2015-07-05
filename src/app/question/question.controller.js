@@ -15,7 +15,10 @@
 					$scope.temp = $scope.question.answers[0];
 					for(var i in $scope.question.answers){
 						if ($scope.question.answers[i].count>$scope.temp.count)
+						{
+							$scope.temp=$scope.question.answers[i];
 							$scope.winner = $scope.question.answers[i].answer;
+						}
 						else if ($scope.question.answers[i].count === $scope.temp.count)
 							$scope.winner = "Tie";
 						else $scope.winner = $scope.temp.answer;
