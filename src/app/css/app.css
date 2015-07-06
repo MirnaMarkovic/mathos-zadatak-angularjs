@@ -1,11 +1,17 @@
-/**, *:after, *:before{
+*, *:after, *:before{
 	box-sizing: border-box;
 }
 
 a:-webkit-any-link{
-	color: black;
-	text-decoration: none;}
-*/
+	color:black;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+	color:gray;
+}
+
 ul{
 	list-style: none;
 }
@@ -25,3 +31,38 @@ ul{
 	overflow: hidden;
 	margin: 20px;
 }
+.question{
+	font-family:Verdana;
+	font-size:18px;
+	margin-bottom:10px;
+}
+.description{
+	color:gray;
+	margin-left:10px;
+}
+
+.question-title{
+	font-family:Verdana;
+	font-size:18px;
+}
+.answer-button{
+	width:100px;
+	height:40px;
+	border:none;
+	background-color: green;
+	font-size: 16px;
+	font-weight:bold;
+	color: white;
+	margin-right:40px;
+}
+
+.answer-button:active{
+	background-color:lightgreen;
+}
+
+.back-button{
+	font-weight:bold;
+	display:block;
+	text-align:center;
+}
+

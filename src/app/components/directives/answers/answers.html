@@ -1,8 +1,8 @@
 <div>
 <ul  ng-repeat="selectedAnswer in selectedQuestion.answers">
 	<li>
-		<button ng-click="selectedQuestionClick(selectedAnswer)">{{selectedAnswer.answer}}</button> - {{selectedAnswer.count}}
+		<button class="answer-button" ng-click="selectedQuestionClick(selectedAnswer)">{{selectedAnswer.answer}}</button>  <span>{{selectedAnswer.count}} votes</span>
 	</li>
 </ul>
-<p>Winner: {{winner}}</p>
+<p>Winner: <strong>{{winner}}</strong> {{percent|winnerPercent}}</p>
 </div>

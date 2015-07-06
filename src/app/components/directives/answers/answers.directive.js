@@ -9,7 +9,8 @@
 					scope: {
 	                    selectedQuestion: '=',
 	                    selectedQuestionClick: '&',
-	                    winner: '='
+	                    winner: '=',
+						percent: '='
 	                },
 					templateUrl: 'app/components/directives/answers/answers.html' 	                
 				}

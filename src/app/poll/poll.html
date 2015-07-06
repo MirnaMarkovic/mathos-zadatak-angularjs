@@ -1,7 +1,7 @@
 <div class="container">
 	<ul ng-if="main.view === false" ng-repeat="question in questions">
-		<li><a href="#question/{{question.id}}/" title="Question" ng-click="select(question)">{{question.question}}</a></li>
-		<li>( {{question.description}} )</li>
+		<li class="question"><a href="#question/{{question.id}}/" title="Question" ng-click="select(question)">{{question.question}}</a></li>
+		<li class="description">Description:  {{question.description}}</li>
 	</ul>
 	<div ng-if="main.view === true">
 		<answers selected-question="selectedQuestion"></answers>
